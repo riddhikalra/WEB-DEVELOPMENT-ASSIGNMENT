@@ -1,0 +1,131 @@
+ *{
+        padding: 0;
+        margin: 0;  
+        font-family: 'Style Script', cursive;
+        background-color: #eee2df;
+ }
+ h1{
+     color:black;
+     font-size: 4rem;
+     text-align: justify;
+ }
+nav{
+
+    height: 100px;
+    width: 100vw;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    list-style-type: none;
+    text-align: right;
+}
+a{
+    text-decoration: none;
+}
+.brand:hover{
+    color: #aa8624;
+    cursor: pointer;;
+}
+
+@media screen and (max-width:600px){
+    ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        height: 350px;
+    }
+    
+}
+
+#slideshow{
+    width: 60vw;
+    height: 700px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+.slide{
+    float: left;
+}
+.slide img{
+    height: 700px;
+    width: 60vw;
+}
+.wrapper{
+    width: calc(70vw*6);
+    animation: 15s ease infinite slider;
+}
+ 
+@keyframes slider{
+    16% {
+        margin-left: 0px;
+      }
+      
+      32% {
+        margin-left: calc(-60vw * 1);
+      }
+      
+      48% {
+        margin-left: calc(-60vw * 2);
+      }
+      
+      64% {
+        margin-left: calc(-60vw* 3);
+      }
+    
+      80%{
+        margin-left:calc(-60vw*4);
+      }
+    
+      96%{
+        margin-left:calc(-60vw*5);
+      }
+}
+
+#products{
+    width: 70vw;
+    height: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+figure{
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    
+    font-size: 1rem;
+    box-shadow: #1d1c1c;
+    transition: .2s ease-in;
+}
+#price{
+    font-family: 'Bebas Neue', cursive;;
+}
+figure:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+figure img{
+    width: 100%;
+  }
+figure button{
+    font-size: 1.5rem;
+    width: 150px;
+    height: 50px;
+    transition:1s ease;
+    overflow: hidden;
+    font-family: 'Bebas Neue', cursive;
+}  
+figure button:hover{
+    cursor: pointer;
+    background-color: #c45daa;
+}

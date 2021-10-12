@@ -5,7 +5,7 @@ import { TiEdit } from "react-icons/ti";
 import { TiTickOutline } from "react-icons/ti";
 
 
-function Todo({ todos, completeTodo, removeTodo, updateTodo , sortdownTodo , moveUp }) {
+function Todo({ todos, completeTodo, removeTodo, updateTodo  }) {
   const [edit, setEdit] = useState({
     // First Values
     id: null,

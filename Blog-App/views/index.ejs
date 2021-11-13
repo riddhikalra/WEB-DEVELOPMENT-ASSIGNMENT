@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<style>
+
+    h1{
+        text-align: center;
+    }
+    #new{
+        border: 2px solid black;
+        margin-left: 46%;
+        padding: 6px;
+        text-decoration: none;
+        background-color: rgb(221, 173, 230);
+    }
+    ul{
+        margin-left: 25%;
+        list-style: none;
+    }
+    li{
+        width: 600px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 1px 1px 2px rgb(104, 104, 104);
+        padding: 16px;
+        margin-bottom: 10px;
+    }
+
+</style>
+
+<body>
+    
+    <h1>BLOGS</h1>
+
+    <a id="new" href="/blogs/new">Add New Blog</a>
+
+    <ul>
+
+        <% for(let blog of blogs){ %> 
+
+            <li>
+                <h3><%= blog.title %> </h3>
+                <p><%= blog.description %> </p>
+                <p>- <%= blog.author %> </p>
+
+                <a href="/blogs/<%= blog._id %> ">View</a><br>
+                <a href="/blogs/<%= blog._id %>/edit ">Edit</a>
+
+                <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+
+        <% } %> 
+    </ul>
+
+</body>
+</html>
